@@ -2,7 +2,7 @@
 
 Développeuse web indépendante. Je construis des outils sur mesure pour les TPE, les vignerons et les porteurs de projets qui veulent une présence numérique qui leur ressemble vraiment.
 
-→ [inspirecode.fr](https://inspirecode.fr) · [LinkedIn](https://linkedin.com/in/isalys-creuzeau)
+→ [inspirecode.fr](https://inspirecode.fr) · [LinkedIn](https://www.linkedin.com/in/isalys-creuzeau-gulinck-b885992a2/)
 
 ---
 
@@ -30,7 +30,7 @@ Site de l'agence. Conçu pour être lisible sur mobile avant tout — parce que 
 ---
 
 ### 🍷 Les Silences du Vin — E-commerce vins confidentiels
-**[lessilencesduvin.fr](https://lessilencesduvin.fr)** *(en cours)*
+**[lessilencesduvin.fr](https://www.lessilencesduvin.fr)** *(en cours — ouverture commerciale à venir)*
 
 Boutique en ligne pour un vigneron indépendant. Vins produits en très petite quantité, clientèle de connaisseurs. Le cahier des charges : une expérience d'achat qui soit à la hauteur du produit — sobre, sensorielle, sans fioriture marketing.
 
@@ -42,7 +42,7 @@ Boutique en ligne pour un vigneron indépendant. Vins produits en très petite q
 ---
 
 ### 📱 Tirelire Maison — App iOS épargne familiale
-**Disponible sur l'App Store**
+**[Disponible sur l'App Store](https://apps.apple.com/fr/app/tirelire-maison/id6761920315)**
 
 Application d'épargne pour les familles qui veulent enseigner la valeur de l'argent à leurs enfants. Interface volontairement simple : une tirelire par objectif, un graphique de progression, c'est tout.
 
@@ -101,8 +101,8 @@ Je documente ce que je construis. Pas pour faire bien — pour que ça reste mai
 ## Contact
 
 **Isalys Creuzeau — Inspire Code**
-SIRET : *(disponible sur demande)*
-[isalys.creuzeau@gmail.com](mailto:isalys.creuzeau@gmail.com)
+[contact@inspirecode.fr](mailto:contact@inspirecode.fr)
+[inspirecode.fr/contact](https://inspirecode.fr/contact)
 [inspirecode.fr](https://inspirecode.fr)
 
 *Mentions légales complètes disponibles sur [inspirecode.fr/mentions-legales](https://inspirecode.fr/mentions-legales)*
