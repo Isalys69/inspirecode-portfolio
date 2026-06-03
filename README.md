@@ -1,4 +1,4 @@
-# Inspire Code — Isalys Creuzeau
+# Inspire Code — Isalys Creuzeau-Gulinck
 
 Développeuse web indépendante. Je construis des outils sur mesure pour les TPE, les vignerons et les porteurs de projets qui veulent une présence numérique qui leur ressemble vraiment.
 
@@ -8,9 +8,9 @@ Développeuse web indépendante. Je construis des outils sur mesure pour les TPE
 
 ## Qui je suis
 
-Autodidacte. Autoentrepreneuse. Je suis passée du "je comprends pas comment ça marche" au "je l'ai construit moi-même" — et c'est exactement cette trajectoire qui me permet d'accompagner mes clients sans les noyer dans le jargon.
+Autodidacte. Autoentrepreneuse. Je suis passée du "je comprends comment ça marche" au "je l'ai construit moi-même". C'est exactement cette trajectoire qui me permet d'accompagner mes clients sans les noyer dans le jargon.
 
-Mon terrain de jeu : les petites structures avec de grandes ambitions. Vignerons en conversion, commerces locaux, artisans du goût. Des gens qui ont une histoire à raconter et qui n'ont pas besoin d'un prestataire qui survend — ils ont besoin d'un outil qui fonctionne, qui dure, et qu'ils comprennent.
+Mon terrain de jeu : les petites structures avec de grandes ambitions. Vignerons en conversion, commerces locaux, artisans du goût. Des gens qui ont une histoire à raconter et qui n'ont pas besoin d'un prestataire qui survend, ils ont besoin d'un outil qui fonctionne, qui dure, et qu'ils comprennent.
 
 Ce qui m'intéresse autant que le code : **la démarche**. Pourquoi ce choix technique ? Qu'est-ce qu'on sacrifie ? Comment ça évolue dans 18 mois quand le client a grandi ?
 
@@ -90,11 +90,11 @@ Déploiement   VPS Linux · Nginx · domaines OVH
 
 ## Démarche
 
-Je travaille en itérations courtes avec des points de validation réguliers — pas parce que c'est dans la méthode, mais parce que ça évite de construire six semaines dans le mauvais sens.
+Je travaille en itérations courtes avec des points de validation réguliers. Cette méthode Agile évite de construire six semaines dans le mauvais sens et le client mesure l'évolution.
 
 Pour chaque projet client, il y a une phase de cadrage qui précède le code : comprendre le métier, identifier les vrais irritants, distinguer ce qui doit être dans l'outil de ce qui doit rester dans la tête du client. C'est souvent là que le projet prend sa forme définitive.
 
-Je documente ce que je construis. Pas pour faire bien — pour que ça reste maintenable dans deux ans, y compris par quelqu'un d'autre que moi.
+Je documente ce que je construis. Pas pour faire bien mais pour que ça reste maintenable dans deux ans, y compris par quelqu'un d'autre que moi.
 
 ---
 
