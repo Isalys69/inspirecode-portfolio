@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inspire Code — Isalys Creuzeau. Développeuse web indépendante, spécialisée TPE et vignerons.">
+  <title>Inspire Code · Isalys Creuzeau</title>
+  <style>
+    :root {
+      --ink:       #1a1a1a;
+      --muted:     #5a5a5a;
+      --light:     #f5f3ef;
+      --rule:      #ddd8d0;
+      --accent:    #7a4f3a;
+      --accent-lt: #f0e9e3;
+      --mono:      'Courier New', Courier, monospace;
+      --serif:     Georgia, 'Times New Roman', serif;
+      --sans:      -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--light);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+    section:first-of-type { border-top: none; }
+
+    /* ── Header ── */
+    header {
+      padding: 3rem 0 2rem;
+    }
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .logo-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .logo-name {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: normal;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .logo-sep { color: var(--muted); }
+    .logo-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 460px;
+    }
+    .header-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+    }
+    .header-links a {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .header-links a:hover { border-color: var(--accent); }
+
+    /* ── Section titles ── */
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: normal;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    /* ── About ── */
+    .about-text p {
+      font-size: 1rem;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    /* ── Projects ── */
+    .projects { display: flex; flex-direction: column; gap: 2.25rem; }
+
+    .project {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: normal;
+      color: var(--ink);
+    }
+    .project-title a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s;
+    }
+    .project-title a:hover { border-color: var(--accent); }
+
+    .project-status {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--accent-lt);
+      padding: 0.15rem 0.5rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .project-status.live { color: #3d6b3d; background: #eaf2ea; }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .project-meta {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-top: 0.2rem;
+    }
+    .project-meta li {
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    .project-meta li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── Stack ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 2rem;
+    }
+    .stack-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .stack-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .stack-value {
+      font-size: 0.88rem;
+      color: var(--ink);
+    }
+
+    /* ── Approach ── */
+    .approach-text p {
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin-bottom: 0.9rem;
+    }
+    .approach-text p:last-child { margin-bottom: 0; }
+
+    /* ── Contact ── */
+    .contact-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+      width: fit-content;
+    }
+    .contact-block a:hover { border-color: var(--accent); }
+    .contact-legal {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .contact-legal a { color: var(--muted); text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    footer p {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      .logo-name { font-size: 1.35rem; }
+      .stack-grid { grid-template-columns: 1fr; }
+      section { padding: 2.5rem 0; }
+      header { padding: 2rem 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-row">
+        <span class="logo-name">Inspire Code</span>
+        <span class="logo-sep">/</span>
+        <span class="logo-sub">Isalys Creuzeau</span>
+      </div>
+      <p class="tagline">Développeuse web indépendante — outils sur mesure pour TPE et vignerons.</p>
+      <div class="header-links">
+        <a href="https://inspirecode.fr" target="_blank" rel="noopener">inspirecode.fr ↗</a>
+        <a href="https://linkedin.com/in/isalys-creuzeau" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>Qui je suis</h2>
+    <div class="about-text">
+      <p>Autodidacte. Autoentrepreneuse. Je suis passée du "je comprends pas comment ça marche" au "je l'ai construit moi-même" — et c'est exactement cette trajectoire qui me permet d'accompagner mes clients sans les noyer dans le jargon.</p>
+      <p>Mon terrain : les petites structures avec de grandes ambitions. Vignerons en conversion, commerces locaux, artisans du goût. Des gens qui ont une histoire à raconter et qui n'ont pas besoin qu'on la survende.</p>
+      <p>Ce qui m'intéresse autant que le code : <em>la démarche</em>. Pourquoi ce choix technique ? Qu'est-ce qu'on sacrifie ? Comment ça évolue dans 18 mois quand le client a grandi ?</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projets</h2>
+    <div class="projects">
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title"><a href="https://inspirecode.fr" target="_blank" rel="noopener">Inspire Code — Site vitrine agence</a></h3>
+          <span class="project-status live">En ligne</span>
+        </div>
+        <p class="project-desc">Site de l'agence. Conçu mobile-first — parce que mes clients vignerons consultent depuis leur cave, pas depuis un MacBook.</p>
+        <ul class="project-meta">
+          <li>HTML/CSS/JS vanilla — zéro dépendance frontend, charge en &lt; 1s sur 4G</li>
+          <li>Choix délibéré de la simplicité : pas de build step, pas de framework à maintenir</li>
+          <li>Refonte v2 en cours : témoignages, devis en ligne</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title"><a href="https://lessilencesduvin.fr" target="_blank" rel="noopener">Les Silences du Vin — E-commerce</a></h3>
+          <span class="project-status">En cours</span>
+        </div>
+        <p class="project-desc">Boutique en ligne pour un vigneron indépendant. Vins produits en très petite quantité. Une expérience d'achat sobre et sensorielle, à la hauteur du produit.</p>
+        <ul class="project-meta">
+          <li>Flask · SQLAlchemy · Stripe · Vue.js</li>
+          <li>Stock en temps réel — la fiche disparaît quand la dernière bouteille part</li>
+          <li>Millésimes modélisés comme entités distinctes d'un même produit</li>
+          <li>3 rounds de wireframes papier avec le vigneron avant la première ligne de code</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title">Tirelire Maison — App iOS</h3>
+          <span class="project-status live">App Store</span>
+        </div>
+        <p class="project-desc">Application d'épargne familiale. Une tirelire par objectif, un graphique de progression. Contrainte forte : utilisable par un enfant de 7 ans sans explication parentale.</p>
+        <ul class="project-meta">
+          <li>Swift · SwiftUI</li>
+          <li>L'App Store review process comme école de qualité — chaque rejet apprend quelque chose</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title">Pièce par Pièce — Jeu tablette</h3>
+          <span class="project-status">Prototype</span>
+        </div>
+        <p class="project-desc">Jeu de construction procédurale. Pièces avec physique réaliste, progression par niveaux, zéro violence, zéro monétisation agressive.</p>
+        <ul class="project-meta">
+          <li>Godot 4 · GDScript — open source, export multiplateforme propre</li>
+          <li>Prototype jouable : 12 pièces, physique 2D validée, UX en test utilisateur</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title">Outil de sourcing vignerons</h3>
+          <span class="project-status">Sur mesure · privé</span>
+        </div>
+        <p class="project-desc">Outil interne pour identifier des domaines viticoles selon des critères précis : appellation, surface, certification, prix de sortie cave. Construit pour un usage professionnel dans le négoce de niche.</p>
+        <ul class="project-meta">
+          <li>Python · Selenium · pandas — sources publiques, export CSV structuré</li>
+          <li>Problème intéressant : modéliser des critères flous ("confidentiel", "nature") en filtres actionnables</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2>Stack technique</h2>
+    <div class="stack-grid">
+      <div class="stack-row">
+        <span class="stack-label">Backend</span>
+        <span class="stack-value">Python 3 · Flask · SQLAlchemy</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Frontend</span>
+        <span class="stack-value">HTML/CSS/JS · Vue.js</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Mobile</span>
+        <span class="stack-value">Swift · SwiftUI</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Game dev</span>
+        <span class="stack-value">Godot 4 · GDScript</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Data</span>
+        <span class="stack-value">Selenium · pandas</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Déploiement</span>
+        <span class="stack-value">VPS Linux · Nginx</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <h2>Démarche</h2>
+    <div class="approach-text">
+      <p>Je travaille en itérations courtes avec des points de validation réguliers — pas parce que c'est dans la méthode, mais parce que ça évite de construire six semaines dans le mauvais sens.</p>
+      <p>Pour chaque projet client, il y a une phase de cadrage qui précède le code : comprendre le métier, identifier les vrais irritants, distinguer ce qui doit être dans l'outil de ce qui doit rester dans la tête du client. C'est souvent là que le projet prend sa forme définitive.</p>
+      <p>Je documente ce que je construis. Pas pour faire bien — pour que ça reste maintenable dans deux ans, y compris par quelqu'un d'autre que moi.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-block">
+      <a href="mailto:isalys.creuzeau@gmail.com">isalys.creuzeau@gmail.com</a>
+      <a href="https://inspirecode.fr" target="_blank" rel="noopener">inspirecode.fr ↗</a>
+      <a href="https://linkedin.com/in/isalys-creuzeau" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <p class="contact-legal">
+      Isalys Creuzeau — Inspire Code, autoentrepreneuse.<br>
+      <a href="https://inspirecode.fr/mentions-legales" target="_blank" rel="noopener">Mentions légales</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Inspire Code · <a href="https://inspirecode.fr/mentions-legales" target="_blank" rel="noopener">Mentions légales</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
