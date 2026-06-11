@@ -180,6 +180,19 @@
       color: var(--accent);
     }
 
+    .projects-more {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+    .projects-more a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .projects-more a:hover { border-color: var(--accent); }
+
     /* ── Stack ── */
     .stack-grid {
       display: grid;
@@ -307,6 +320,7 @@
           <li>Flask · SQLAlchemy · Stripe · Vue.js</li>
           <li>Stock en temps réel — la fiche disparaît quand la dernière bouteille part</li>
           <li>Millésimes modélisés comme entités distinctes d'un même produit</li>
+          <li>Back-office sur mesure : carnet de dégustation structuré autour de la méthode réellement pratiquée</li>
           <li>3 rounds de wireframes papier avec le vigneron avant la première ligne de code</li>
         </ul>
       </div>
@@ -337,15 +351,48 @@
 
       <div class="project">
         <div class="project-header">
-          <h3 class="project-title">Outil de sourcing vignerons</h3>
-          <span class="project-status">Sur mesure · privé</span>
+          <h3 class="project-title">Gestion Boursière — App web de pilotage</h3>
+          <span class="project-status live">En production</span>
         </div>
-        <p class="project-desc">Outil interne pour identifier des domaines viticoles selon des critères précis : appellation, surface, certification, prix de sortie cave. Construit pour un usage professionnel dans le négoce de niche.</p>
+        <p class="project-desc">Application web de pilotage d'un portefeuille boursier (PEA), en remplacement d'un tableur devenu limitant. Deux espaces : pilotage du portefeuille et préparation des décisions d'entrée (pré-trade).</p>
         <ul class="project-meta">
-          <li>Python · Selenium · pandas — sources publiques, export CSV structuré</li>
-          <li>Problème intéressant : modéliser des critères flous ("confidentiel", "nature") en filtres actionnables</li>
+          <li>Flask · SQLAlchemy</li>
+          <li>Recalcul des objectifs à la demande, répartition automatique de l'investissement mensuel</li>
+          <li>Cas d'école du passage tableur → application métier : périmètre cadré, calculs fiabilisés</li>
         </ul>
       </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title">PhilaMaster — Collection philatélique</h3>
+          <span class="project-status">En service · privé</span>
+        </div>
+        <p class="project-desc">Numérisation et valorisation d'une collection de timbres transmise en héritage. Le geste le plus naturel : photographier un timbre, le laisser être reconnu par l'IA, puis rejoindre le catalogue.</p>
+        <ul class="project-meta">
+          <li>Frontend mobile-first (Expo) · backend FastAPI (Python)</li>
+          <li>Reconnaissance par IA : identification, origine, références catalogue</li>
+          <li>Un outil intime, sans vocation publique, mais qui rend un service réel au quotidien</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3 class="project-title">Sourcing de domaines viticoles</h3>
+          <span class="project-status">Outil interne · privé</span>
+        </div>
+        <p class="project-desc">Croisement de données publiques pour identifier des domaines viticoles confidentiels, en amont d'une prospection menée sur le terrain. Développé pour Les Silences du Vin.</p>
+        <ul class="project-meta">
+          <li>Python · pandas — Registre Parcellaire Graphique (open data) croisé avec les références INSEE</li>
+          <li>Traitement ponctuel, adapté au rythme réel : une campagne de sourcing par an</li>
+          <li>L'automatisation ne remplace pas le travail humain, elle le concentre là où il a le plus de valeur</li>
+        </ul>
+      </div>
+
+      <p class="projects-more">
+        Plus de détails (démarche, captures d'écran, contexte) sur
+        <a href="https://www.inspirecode.fr/realisations" target="_blank" rel="noopener">inspirecode.fr/realisations ↗</a>
+        et <a href="https://www.inspirecode.fr/realisations_automatisations" target="_blank" rel="noopener">les automatisations ↗</a>.
+      </p>
 
     </div>
   </section>
@@ -355,7 +402,7 @@
     <div class="stack-grid">
       <div class="stack-row">
         <span class="stack-label">Backend</span>
-        <span class="stack-value">Python 3 · Flask · SQLAlchemy</span>
+        <span class="stack-value">Python 3 · Flask · FastAPI · SQLAlchemy</span>
       </div>
       <div class="stack-row">
         <span class="stack-label">Frontend</span>

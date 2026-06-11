@@ -37,6 +37,7 @@ Boutique en ligne pour un vigneron indépendant. Vins produits en très petite q
 - Stack : Flask (Python), SQLAlchemy, Stripe, Vue.js
 - Modèle de stock en temps réel : quand la dernière bouteille est vendue, la fiche disparaît
 - Enjeu technique : gestion des millésimes comme entités distinctes d'un même produit
+- Back-office sur mesure : carnet de dégustation intégré, structuré autour de la méthode de dégustation réellement pratiquée (géo-sensorielle et poly-sensorielle)
 - Démarche : 3 rounds de wireframes papier avec le vigneron avant la première ligne de code
 
 ---
@@ -63,21 +64,50 @@ Jeu de construction procédurale pour tablette. L'idée : des pièces avec des c
 
 ---
 
-### 🔍 Outil de sourcing vignerons — Sur mesure
-*(repo privé)*
+### 📊 Gestion Boursière — App web de pilotage de portefeuille
+*(en production, usage personnel quotidien)*
 
-Outil interne développé pour identifier des domaines viticoles correspondant à des critères précis (appellation, surface, certification bio, prix de sortie cave). Pensé pour un usage professionnel dans le négoce de niche.
+Application web développée pour piloter un portefeuille boursier (PEA) au quotidien, en remplacement d'un tableur devenu limitant. Deux espaces distincts : pilotage du portefeuille existant et préparation des décisions d'entrée (pré-trade).
 
-- Stack : Python, Selenium, pandas
-- Données : scraping légal de sources publiques + export CSV structuré
-- Ce qui était intéressant : modéliser des critères flous ("confidentiel", "nature") en filtres actionnables
+- Stack : Flask (Python), SQLAlchemy
+- Recalcul des objectifs d'investissement à la demande, plutôt que des projections figées
+- Répartition automatique de l'investissement mensuel selon la somme disponible
+- Grille d'analyse d'entreprise pour objectiver les choix d'entrée
+- Cas d'école du passage tableur → application métier : périmètre cadré, calculs fiabilisés
+
+---
+
+### 🏛️ PhilaMaster — Gestion de collection philatélique
+*(en service, accès privé)*
+
+Application de numérisation et de valorisation d'une collection de timbres transmise en héritage. Construite autour du geste le plus naturel : photographier un timbre, le laisser être reconnu par l'IA, puis rejoindre le catalogue.
+
+- Stack : frontend mobile-first (Expo), backend FastAPI (Python)
+- Reconnaissance par IA du timbre photographié : identification, origine, références catalogue
+- Quatre espaces : accueil, catalogue, ajout, statistiques
+- Ce qui m'a plu : un outil intime, sans vocation publique, mais qui rend un service réel au quotidien
+
+---
+
+### 🔍 Sourcing de domaines viticoles — Outil interne
+*(repo privé — Les Silences du Vin)*
+
+Outil de croisement de données publiques pour identifier des domaines viticoles confidentiels, en amont d'une prospection menée sur le terrain.
+
+- Données : Registre Parcellaire Graphique (open data agricole) croisé avec les références INSEE
+- Stack : Python, pandas
+- Traitement ponctuel, adapté au rythme réel de l'activité : une campagne de sourcing par an
+- Résultat volontairement restreint : quelques domaines ciblés plutôt qu'une liste exhaustive
+- Philosophie : l'automatisation ne remplace pas le travail humain, elle le concentre là où il a le plus de valeur
+
+> Plus de détails (démarche, captures d'écran, contexte) sur [inspirecode.fr/realisations](https://www.inspirecode.fr/realisations) et [inspirecode.fr/realisations_automatisations](https://www.inspirecode.fr/realisations_automatisations).
 
 ---
 
 ## Stack technique
 
 ```
-Backend       Python 3.13 · Flask · SQLAlchemy · REST
+Backend       Python 3.13 · Flask · FastAPI · SQLAlchemy · REST
 Frontend      HTML/CSS/JS · Vue.js · mobile-first systématique
 iOS           Swift · SwiftUI
 Game dev      Godot 4 · GDScript
